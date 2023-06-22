@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: example-app
+  name: galgal-user-producer
   labels:
-    app.kubernetes.io/name: example-app
-    app.kubernetes.io/instance: example-app
+    app.kubernetes.io/name: galgal-user-producer
+    app.kubernetes.io/instance: galgal-user-producer
 spec:
   type: ClusterIP
   ports:
@@ -13,5 +13,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: example-app
-    app.kubernetes.io/instance: example-app
+    app.kubernetes.io/name: galgal-user-producer
+    app.kubernetes.io/instance: galgal-user-producer

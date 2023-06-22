@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-app
+  name: galgal-user-producer
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - name: example-app
+        - name: galgal-user-producer
           resources:
             limits:
               cpu: 200m

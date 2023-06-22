@@ -7,24 +7,24 @@ resources:
 images:
   - name: asia.gcr.io/poc-innovation-iot/galgal-user-producer
     newTag: 0df5a67c
-  - name: asia.gcr.io/poc-innovation-iot/training-kube/gal-producer-app
+  - name: asia.gcr.io/poc-innovation-iot/training-kube/galgal-user-producer
     newTag: v1.4
 
 configMapGenerator:
   - behavior: merge
     envs:
       - configs/config.env
-    name: gal-producer-app-configmap-env
+    name: galgal-user-producer-configmap-env
   - behavior: merge
     files:
       - configs/config.yaml
-    name: gal-producer-app-configmap-file
+    name: galgal-user-producer-configmap-file
 
 secretGenerator:
   - behavior: merge
     envs:
       - secrets/secret.env
-    name: gal-producer-app-secret-env
+    name: galgal-user-producer-secret-env
 
 patchesStrategicMerge:
   - patches/set_resources.yaml

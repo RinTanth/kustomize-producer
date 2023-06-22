@@ -52,4 +52,4 @@ secrets:
 #     - kafka.poc.internal
 #   port: 9092
 #   topic: example-topic
-#   consume-group: example-consumer-group
+#   consume-group: example-producer-group

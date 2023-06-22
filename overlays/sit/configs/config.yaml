@@ -1,3 +1,55 @@
+# don't forget to update config.model
+environment: local
+
+app:
+  name: gal-producer
+
 server:
-  port: :8080
-  appname: example-app
+  port: 8080
+  timeout: 15
+
+log:
+  environment: production
+  level: info
+  format: json
+
+postgres:
+  host: 172.28.240.42
+  port: 5432
+  db-name: galgal-hw3
+  db-timezone: Asia/Bangkok
+  db-ssl: disable
+
+redis:
+  address: 172.28.241.3:6379
+  password:
+  database: 0
+  redis-auth-string: $REDIS_AUTH_STRING
+
+kafka:
+  address:
+    - kafka.poc.internal:9092
+  topic: gal-topic
+
+user-list-key: USER_LIST
+secrets:
+  db-user: appusr
+  db-password: +^1)X\cbiRZ1jK?z
+# db:
+#   host: 172.28.240.42
+#   port: 5432
+#   db-name: postgres-coc-db
+#   db-user: appusr
+#   db-password: +^1)X\cbiRZ1jK?z
+
+# redis:
+#   host: 172.28.241.3
+#   port: 6379
+#   redis-auth-string: 92008bf3-478e-4aaf-9a41-007423d8bfb6
+
+# kafka:
+#   address:
+#     - kafka.poc.internal
+#   port: 9092
+#   topic: example-topic
+#   consume-group: example-producer-group
