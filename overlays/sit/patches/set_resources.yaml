@@ -10,8 +10,8 @@ spec:
         - name: galgal-user-producer
           resources:
             limits:
-              cpu: 200m
-              memory: 512Mi
+              cpu: 250m
+              memory: 64Mi
             requests:
-              cpu: 200m
-              memory: 512Mi
+              cpu: 100m
+              memory: 32Mi
