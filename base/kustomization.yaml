@@ -4,13 +4,13 @@ resources:
   - resources/deployment.yaml
   - resources/service.yaml
 configMapGenerator:
-  - name: example-app-configmap-env
+  - name: gal-producer-app-configmap-env
     envs:
       - configs/config.env
-  - name: example-app-configmap-file
+  - name: gal-producer-app-configmap-file
     files:
       - configs/config.yaml
 secretGenerator:
-  - name: example-app-secret-env
+  - name: gal-producer-app-secret-env
     envs:
       - secrets/secret.env
